@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/shortcut-icon.png">
+    <link rel="stylesheet" href="/css/cadastro-login.css">
+    <script src="/js/cadastro.js" async></script>
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <a href="/index.html"><img src="/img/logo-rfilmes.png" alt="logo-RFilmes"></a>
+    </header>
+
+    <main>
+        <form>
+            <h2>Crie sua conta</h2>
+    
+            <div>
+                <label>Nome</label>
+                <input id="input-nome" type="text" placeholder="Digite seu nome" required>
+            </div>
+            <div>
+                <label>Email</label>
+                <input id="input-email" type="email" placeholder="Digite seu email" required>
+            </div>
+            <div>
+                <label>Senha</label>
+                <input id="input-senha" type="password" placeholder="Digite sua senha" required>
+            </div>
+            <div>
+                <label>Confirma Senha</label>
+                <input id="input-confirma-senha" type="password" placeholder="Confirme sua senha" required>
+            </div>
+    
+            <span>Já possui uma conta? <a href="/routes/login.html">Clique aqui</a></span>
+            <button id="btn-confirmar" type="submit">Confirmar</button>
+        </form>
+    </main>
+</body>
+</html>
