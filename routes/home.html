@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="shortcut icon" href="img/shortcut-icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/c4e90fc895.js" crossorigin="anonymous" async></script>
+    <script src="/js/custom.js" async></script>
+    <script src="/js/home.js" async></script>
+    <title>RFilmes</title>
+</head>
+
+<body>
+    <header>
+        <a href="/index.html"><img src="/img/logo-rfilmes.png" alt="logo-rfilmes"></a>
+        <ul>
+            <button id="btn-cadastrar">Cadastrar filme</button>
+            <button id="btn-sair">Sair</button>
+        </ul>
+        <i class="fa-solid fa-bars" id="btn-menu"></i>
+    </header>
+
+    <div class="container-cadastrar">
+        <span id="btn-fechar-tela">X</span>
+        <form>
+            <h2>Cadastrar Filme</h2>
+            <div class="conteudo-cadastrar">
+                <div class="conteudo-esquerda">
+                    <img src="https://png.pngtree.com/element_our/20200703/ourlarge/pngtree-download-movie-board-clip-material-image_2300769.jpg"
+                        alt="imagem-do-filme">
+                </div>
+                <div class="conteudo-direita">
+                    <div class="lado-esquerdo">
+                        <label>
+                            <span>Titulo</span>
+                            <input id="input-titulo" type="text" placeholder="Homem de ferro" required>
+                        </label>
+                        <label>
+                            <span>Descrição</span>
+                            <textarea id="input-descricao" cols="25" rows="8" required minlength="50"
+                                placeholder="O filme conta a história de..."></textarea>
+                        </label>
+                        <label>
+                            <span>Categoria</span>
+                            <input id="input-categoria" type="text" placeholder="Ação|Aventura" required>
+                        </label>
+                    </div>
+                    <div class="lado-direito">
+                        <label>
+                            <span>Diretor</span>
+                            <input id="input-diretor" type="text" placeholder="Scoot Balls" required>
+                        </label>
+                        <label>
+                            <span>Ano de Lançamento</span>
+                            <input id="input-lancamento" type="number" required min="1895" placeholder="2001">
+                        </label>
+                        <label>
+                            <span>Tempo em Minutos</span>
+                            <input id="input-tempo" type="number" required min="1" placeholder="120">
+                        </label>
+                        <label>
+                            <span>URL do filme</span>
+                            <input id="input-url" type="text" placeholder="Insira a URL do filme" required>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button id="btn-cadastrar-form">Cadastrar</button>
+        </form>
+    </div>
+
+    <main>
+        <form class="menu">
+            <div class="container-fechar">
+                <i class="fa-solid fa-x" id="btn-fechar"></i>
+            </div>
+            <h1>Escolha uma opção</h1>
+            <button id="btn-cadastrar-menu">Cadastrar Filme</button>
+            <button id="btn-sair-menu">Sair</button>
+        </form>
+        <section class="container-animado">
+            <div class="container-info">
+                <h3>API RFilmes</h3>
+                <p>
+                    A API Rfilmes tem como objetivo servir dados sobre determinados filmes. Você pode acessar sua
+                    documentação clicando no botão abaixo.
+                </p>
+                <a target="_blank" href="http://localhost:8080/swagger-ui/index.html#/"><button>Saiba Mais</button></a>
+            </div>
+        </section>
+
+        <div id="container-pesquisar" class="container-pesquisa">
+            <h1>Filmes Disponíveis</h1>
+            <div>
+                <input id="input-filme" type="text" placeholder="Digite o titulo de um filme">
+                <i id="btn-pesquisar" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+        </div>
+
+        <section class="container-filmes">
+            
+        </section>
+
+        <div class="paginacao">
+            <button id="seta-da-esquerda"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="btn-pgn" id="btn-paginacao-1" style="background-color: blue;">1</button>
+            <button class="btn-pgn" id="btn-paginacao-2">2</button>
+            <span>...</span>
+            <button class="btn-pgn" id="btn-paginacao-3">3</button>
+            <button id="seta-da-direita"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contatos">
+            <div>
+                <a target="_blank" href="https://github.com/RonyAbreu"><i class="fa-brands fa-github"></i></a>
+                <span>GitHub</span>
+            </div>
+
+            <div>
+                <a target="_blank" href="https://www.linkedin.com/in/ronyelison-de-oliveira-abreu/"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <span>LinkedIn</span>
+            </div>
+
+            <div>
+                <a target="_blank"
+                    href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJTHVmbpnWmFtjCwQDbzkkMLWdQJjrvKPdJKHtmJqlTqdDkjRcKkgZtTgCwplqkKVbpJgLq">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <span>Email</span>
+            </div>
+        </div>
+        <span id="direitos">&copy;2023 Todos os Direitos Reservados - RonyDev</span>
+    </footer>
+</body>
+
+</html>
