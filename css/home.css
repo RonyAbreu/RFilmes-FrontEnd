@@ -1,0 +1,655 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    text-decoration: none;
+}
+
+body{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 30px 60px;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+header img{
+    width: 150px;
+    cursor: pointer;
+}
+
+header ul{
+    display: flex;
+    gap: 3em;
+}
+
+header ul button{
+    background-color: black;
+    font-size: 1.2em;
+    border: 1px solid black;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    text-transform: uppercase;
+}
+
+header ul button:hover{
+    color: red;
+}
+
+#btn-sair{
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+#btn-sair:hover{
+    background-color: black;
+    border: 1px solid red;
+}
+
+header #btn-menu{
+    display: none;
+    background-color: black;
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+header #btn-menu:hover{
+    color: red;
+}
+
+.container-cadastrar{
+    display: none;
+    width: 1000px;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    background-color: white;
+    position: fixed;
+    z-index: 3;
+    top: 10%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px black;
+}
+
+.container-cadastrar #btn-fechar-tela{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    margin-right: 40px;
+    font-size: 1.7em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.container-cadastrar #btn-fechar-tela:hover{
+    color: red;
+}
+
+.container-cadastrar form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-cadastrar form h2{
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}
+
+.container-cadastrar form button{
+    width: 300px;
+    height: 40px;
+    background-color: red;
+    border: none;
+    border-radius: 20px;
+    font-weight: bolder;
+    font-size: 1.7em;
+    color: white;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    margin-bottom: 1.5em;
+}
+
+.container-cadastrar form button:hover{
+    background-color: black;
+    color: red;
+}
+
+.conteudo-cadastrar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.conteudo-esquerda{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    padding: 20px;
+}
+
+.conteudo-esquerda img{
+    border: 1px solid black;
+    width: 200px;
+    height: 250px;
+}
+
+ .conteudo-esquerda label span{
+    font-weight: bold;
+}
+
+.conteudo-esquerda label input{
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+}
+
+.conteudo-direita{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 1em;
+}
+
+.lado-esquerdo{
+    width: 50%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.lado-esquerdo label{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: .2em;
+}
+
+.lado-esquerdo label span{
+    font-weight: bold;
+}
+
+.lado-esquerdo label input{
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+}
+
+.lado-esquerdo label input:focus,
+.lado-esquerdo label textarea:focus{
+    border: 1px solid blue;
+    box-shadow: 0px 0px 5px blue;
+}
+
+.lado-esquerdo label textarea{
+    width: 100%;
+    padding: 10px;
+}
+
+.lado-direito{
+    width: 50%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.94em;
+}
+
+.lado-direito label{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: .2em;
+}
+
+.lado-direito label span{
+    font-weight: bold;
+}
+
+.lado-direito label input{
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+}
+
+.lado-direito label input:focus{
+    border: 1px solid blue;
+    box-shadow: 0px 0px 5px blue;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+main .menu{
+    width: 400px;
+    padding: 25px 40px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2em;
+    position: fixed;
+    top: 20%;
+    background-color: red;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+main .menu .container-fechar{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+main .menu .container-fechar i{
+    font-size: 1.5em;
+    margin-bottom: .5em;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+main .menu .container-fechar i:hover{
+    color: black;
+}
+
+main .menu h1{
+    color: white;
+    text-align: center;
+}
+
+main .menu button{
+    width: 70%;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+main .menu button:hover{
+    box-shadow: 0px 2px 7px black;
+}
+
+main .container-animado{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: end;
+    background-image: url('https://i.pinimg.com/originals/4a/2e/2b/4a2e2b7a3aabd03daebf11d1a2e970cc.gif');
+    background-size: cover;
+    opacity: .9;
+}
+
+main .container-info{
+    width: 400px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    margin-left: 2.5em;
+    margin-bottom: 100px;
+    background-color: #dbdbdbc0;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px black;
+}
+
+main .container-info h3{
+    font-size: 2em;
+}
+
+main .container-info p{
+    font-size: 1.1em;
+}
+
+main .container-info button{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+main .container-info button:hover{
+    box-shadow: 0px 0px 6px black;
+}
+
+main .container-pesquisa{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2em;
+    background-color: black;
+    color: #fff;
+}
+
+main .container-pesquisa h1{
+    text-shadow: 0px 0px 2px white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+main .container-pesquisa div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .container-pesquisa div input{
+    width: 400px;
+    height: 40px;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 20px;
+    font-size: 1.1em;
+}
+
+main .container-pesquisa div input:focus{
+    border: 2px solid red;
+}
+
+main .container-pesquisa div i{
+    color: black;
+    margin-left: -1.8em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+main .container-filmes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    background-color: black;
+    padding: 40px 20px;
+}
+
+main .container-filmes .filme{
+    width: 220px;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    transition: all .3s ease-in-out;
+}
+
+main .container-filmes .filme:hover{
+    transform: scale(1.1);
+}
+
+main .container-filmes div img{
+    width: 200px;
+    height: 300px;
+    cursor: pointer;
+    
+}
+
+main .container-filmes div p{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    color: #fff;
+}
+
+main .paginacao{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    padding: 40px;
+    background-color: black;
+    color: white;
+}
+
+main .paginacao #seta-da-esquerda{
+    display: none;
+}
+
+main .paginacao #btn-paginacao-1{
+    background-color: blue;
+}
+
+main .paginacao button{
+    font-size: 1.5em;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+
+main .paginacao button:hover{
+    border: 1px solid white;
+}
+
+main .paginacao .btn-pgn:focus{
+    background-color: blue;
+}
+
+main .paginacao button i{
+    font-size: 1.2em;
+}
+
+main .paginacao span{
+    font-size: 1.4em
+}
+
+
+footer{
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3em;
+    padding: 30px;
+}
+
+footer .contatos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+footer .contatos div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .2em;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+footer .contatos div:hover{
+    transform: scale(1.1);
+    
+}
+
+footer .contatos div i{
+    font-size: 40px;
+    color: white;
+}
+
+footer .contatos div span{
+    font-size: 1em;
+    color: white;
+}
+
+footer #direitos{
+    color: white;
+    text-align: center;
+}
+
+@media(max-width:1200px){
+    .container-cadastrar{
+        width: 90%;
+    }
+
+    .container-animado{
+        background-position: center;
+    }
+
+    main .container-info{
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width:900px){
+    header #btn-menu{
+        display: flex;
+    }
+
+    header ul{
+        display: none;
+    }
+
+    main .container-animado{
+        justify-content: center;
+        height: 600px;
+    }
+
+    .conteudo-esquerda{
+        display: none;
+    }
+
+    main .container-info{
+        margin-bottom: 5px;
+        margin-left: 0;
+        padding: 15px;
+        font-size: .9em;
+    }
+
+    main .container-info h3{
+        font-size: 1.5em;
+    }
+}
+
+@media(max-width:600px){
+    header{
+        padding: 10px 12px;
+    }
+
+    header img{
+        width: 110px;
+    }
+
+    .container-cadastrar form h2{
+        font-size: 1.5em;
+        margin-bottom: .2em;
+    }
+
+    .container-cadastrar form button{
+        width: 50%;
+        font-size: 1.4em;
+        margin-bottom: .8em;
+    }
+
+    main .menu{
+        width: 80%;
+    }
+}
+
+@media(max-width:450px){
+    main .container-info {
+        width: 90%;
+        font-size: .7em;
+    }
+
+    .container-cadastrar{
+        height: 630px;
+        top: 5%;
+        overflow: auto;
+    }
+
+    .conteudo-cadastrar{
+        gap: .1em;
+        margin-bottom: .5em;
+    }
+
+    .conteudo-cadastrar .conteudo-direita{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: .5em;
+    }
+
+    .conteudo-direita .lado-esquerdo,
+    .conteudo-direita .lado-direito{
+        width: 100%;
+        gap: .3em;
+    }
+
+    main .menu{
+        width: 95%;
+    }
+
+    main .menu button{
+        width: 100%;
+        font-size: 1.4em;
+    }
+
+    #input-filme{
+        width: 90%;
+    }
+}
