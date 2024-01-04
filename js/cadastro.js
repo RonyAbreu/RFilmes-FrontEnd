@@ -5,7 +5,7 @@ const inputConfirmaSenha = document.getElementById('input-confirma-senha')
 const btnConfirmar = document.getElementById('btn-confirmar')
 const form = document.querySelector('form')
 
-const url = 'http://localhost:8080/usuario/registro'
+const url = 'https://rfilmes-prod.up.railway.app/usuario/registro'
 
 form.addEventListener('submit', function (e) {
     e.preventDefault()
@@ -57,7 +57,7 @@ function criarUsuario() {
 }
 
 function fazerLogin() {
-    const url = 'http://localhost:8080/usuario/login'
+    const url = 'https://rfilmes-prod.up.railway.app/usuario/login'
     let email = inputEmail.value
     let senha = inputSenha.value
 

@@ -30,7 +30,7 @@ btnDeletar.addEventListener('click', function () {
     const resposta = confirm('Deseja remover o filme?')
     if (resposta) {
         const idFilme = pegaIdDoFilme()
-        const url = `http://localhost:8080/api/v1/filmes/${idFilme}`;
+        const url = `https://rfilmes-prod.up.railway.app/api/v1/filmes/${idFilme}`;
         fetch(url, {
             method: 'DELETE',
             headers: {
@@ -58,7 +58,7 @@ btnFecharTelaDeCadastro.addEventListener('click', function (e) {
 btnEditarForm.addEventListener('click', function (e) {
     e.preventDefault()
     const idFilme = pegaIdDoFilme()
-    const url = `http://localhost:8080/api/v1/filmes/${idFilme}`;
+    const url = `https://rfilmes-prod.up.railway.app/api/v1/filmes/${idFilme}`;
     const dadosFilme = {
         titulo: inputTitulo.value,
         descricao: inputDescricao.value,

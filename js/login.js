@@ -3,7 +3,7 @@ const inputEmail = document.getElementById('input-email')
 const inputSenha = document.getElementById('input-senha')
 const btnEntrar = document.getElementById('btn-entrar')
 
-const url = 'http://localhost:8080/usuario/login'
+const url = 'https://rfilmes-prod.up.railway.app/usuario/login'
 
 form.addEventListener('submit', function (e) {
     e.preventDefault()
